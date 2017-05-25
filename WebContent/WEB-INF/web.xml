@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Notemaker</display-name>
+	<servlet>
+		<display-name>DeleteNoteServlet</display-name>
+		<servlet-name>DeleteNoteServlet</servlet-name>
+		<servlet-class>com.notemaker.controller.DeleteNoteServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>NoteServlet</display-name>
+		<servlet-name>NoteServlet</servlet-name>
+		<servlet-class>com.notemaker.controller.NoteServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>LoginServlet</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.notemaker.controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<display-name>RegisterServlet</display-name>
+		<servlet-name>RegisterServlet</servlet-name>
+		<servlet-class>com.notemaker.controller.RegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>NoteServlet</servlet-name>
+		<url-pattern>/NoteServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteNoteServlet</servlet-name>
+		<url-pattern>/DeleteNoteServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+        <error-code>404</error-code>
+        <location>/404.jsp</location>
+    </error-page>
+</web-app>
